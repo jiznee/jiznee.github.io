@@ -133,6 +133,10 @@ a:focus {
 	position: relative;
 	padding: 0rem 12rem;
 	height: 100vh;
+	background-image: url('img/hero-pic.jpg');
+	background-repeat: no-repeat;
+	background-position: 90% 60%;
+	background-size: 35%;
 }
 
 .title {
@@ -140,6 +144,8 @@ a:focus {
 	justify-content: center;
 	padding: 10rem 0;
 	margin: 0;
+	mix-blend-mode: overlay;
+	position: relative;
 }
 
 .desc {
@@ -159,7 +165,7 @@ a:focus {
 }
 
 .btn {
-	position: relative;
+	position: ;
     z-index: 100;
     margin: 1px;
     padding: 10px 20px;
@@ -167,6 +173,15 @@ a:focus {
 	border-radius: 4px;
 	font-size: 20px;
     font-weight: 500;
+    z-index: -1 !important;
+}
+
+.hero-pic {
+	width: 35%;
+	position: absolute;
+	top: -280px;
+	right: 30px;
+	z-index: -99 !important;
 }
 
 .mt-0 {
@@ -175,6 +190,7 @@ a:focus {
 
 .navigation {
 	position: fixed;
+	mix-blend-mode: difference !important;
 	top: 0;
 	opacity: 1;
 	width: 100vw;
@@ -184,6 +200,7 @@ a:focus {
 	min-height: -webkit-fill-available;
 	pointer-events: none;
 	z-index: 5;
+
 
 }
 .navigation .nuxt-link-exact-active ellipse,
@@ -205,13 +222,13 @@ a:focus {
 	width: 100%;
 	top: 0;
 	left: 0;
-	mix-blend-mode: difference;
+	mix-blend-mode: difference !important;
 }
 .navigation a,
 .navigation button {
 	color: currentColor;
 	pointer-events: auto;
-	mix-blend-mode: difference;
+	mix-blend-mode: difference !important;
 }
 .navigation .home {
 	position: absolute;
@@ -705,3 +722,6 @@ html.has-scroll-dragging {
 	cursor: -webkit-grabbing;
 	cursor: grabbing; 
 }
+
+
+

@@ -16,6 +16,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="base.d0d64955.css">
 	<link rel="stylesheet" type="text/css" href="css/spacing.css">
+	<link rel="stylesheet" type="text/css" href="css/locomotive-scroll.css">
 	<script>document.documentElement.className = "js";
 
 var supportsCssVars = function supportsCssVars() {
@@ -49,11 +50,12 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 		</a>
 	</nav>
 	
-	<main>
-		
-		<nav class="menu">
+	<main >
+		<nav class="menu" >
+			
 			<div class="header">
-				<h1 class="title">Jizni Corrine</h1>
+					<h1 class="title" data-scroll data-scroll-direction="horizontal">Jizni Corrine</h1>
+				<!-- <img src="img/hero-pic.jpg" class="hero-pic"> -->
 				<div class="bottom">
 					<div class="desc">
 						<h2 class="mt-0">PH based web/graphic designer + web developer focused on delivering unforgettable user experience</h2>
@@ -62,7 +64,9 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 						<h2 class="mt-0 mb-20">let's talk</h2>
 						<a class="btn">say hello!</a>
 					</div>
+
 				</div>
+				
 			</div>
 				
 			<div id="content">
@@ -205,6 +209,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 			<div class="container">
 				<a href="" class="big-text">get a free quote</a>
 			</div>
+	
 		</nav>
 	</main>
 	<svg class="cursor" width="40" height="40" viewBox="0 0 40 40">
@@ -213,5 +218,38 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 	<!-- <script src="demo1.151408fb.js"></script> -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="demo2.44794d1a.js"></script>
+	<script src="locomotive-scroll.min.js"></script>
+
+	<script>
+	    (function () {
+	        var scroll = new LocomotiveScroll();
+	    })();
+	</script>
+	<script>
+	$( document ).ready(function() {
+		$('a.menu__item').on('mousein', function(){
+		   $('body').css('background-color', '#d99f32 !important');
+		   console.log('yooooo');
+		});
+		$('a.menu__item').on('mouseout', function(){
+		  $('body').css('background-color', 'white');
+		});
+	});
+
+	$(document).ready(function() {
+
+        $('a.menu__item').hover(
+
+           function () {
+              $('body').css('background-color', '#d99f32 !important');
+           }, 
+
+           function () {
+              $('body').css('background-color', 'white")');
+           }
+        );
+
+     });
+	</script>
 </body>
 </html>
